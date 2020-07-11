@@ -31,9 +31,9 @@ model Configuration：可以根据你的model文件来进行设置参数
 
 Loss Configuration：在gradcam++等论文中，通常都是利用分类得到的结果，对最大概率的那一类和其他类对二分类，然后改造为onehot编码（具体是main_gradcam.py的第157行）， 做反向传播获取梯度，但是实际上根据不同的loss反传获取的梯度不同，最后合成的热力图也会有所不同，因此设置了可以选择不同的loss搭配做出不同的gradcam热力图，格式如1*CrossEntropy+3*Triplet，添加loss请到./loss/__init__.py中设置。ps：程序中现仅对CrossEntropy做onehot处理。
 
-###demo
+### demo
 ```shell script
 gradcam_pp.sh
 ```
-.
-**PS：** 关于model输出的格式，请按照这种这种格式进行存放[[feature_list],[class_list]]。
+
+**PS:** 关于model输出的格式，请按照这种这种格式进行存放[[feature_list],[class_list]]。
