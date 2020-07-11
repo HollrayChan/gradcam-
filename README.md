@@ -1,12 +1,10 @@
 ### Gradcam++
 
-maker：HollrayChan
-
 gradcam++ imgs 生成流程：forward获取指定卷积层feature_map, backward的时候获取相应feature_map的梯度张量，将两者进过归一化等处理后按照C通道，相乘，累加，最后转换为热力图(没有做最后的relu):p
 
 参考论文：https://arxiv.org/pdf/1710.11063.pdf
 
-###Usage
+#### Usage
 **shell** : 存放运行的shell文件
 
 **weight** : 存放模型的权重
